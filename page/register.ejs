@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('include/header') %>
+    <title>Register Page</title>
+</head>
+<!-- <script src="resource/js/app.js" defer></script> -->
+<body class="container py-3 bg-body-secondary">
+
+    <div class="container bg-light py-3 px-3 col-md-6 mt-3">
+        <!-- Pills navs -->
+        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+            <a class="nav-link" id="tab-login" href="/" role="tab"
+                aria-controls="pills-login" aria-selected="true">Se connecter</a>
+            </li>
+            <li class="nav-item" role="presentation">
+            <a class="nav-link  active" id="tab-register" href="/register" role="tab"
+                >S'enregistrer</a>
+            </li>
+        </ul>
+        <!-- Pills navs -->
+        
+        <!-- Pills content -->
+        <div>
+           
+            <div class="tab-pane " id="pills-register">
+                <form action="/register-info" method="post">
+                    <div class="mb-3">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" class="form-control" placeholder="exemple: Afao" required>
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="prenom">Prenom</label>
+                        <input type="text" name="prenom" id="prenom" class="form-control" placeholder="exemple: frido" required> 
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="exemple: Togo42@gmail.com" required>
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="pswd">mot de passe</label>
+                        <input type="password" name="pswd" id="pswd" class="form-control" placeholder="****" required>
+                    </div>
+
+                    <input type="hidden" name="statut" value="0">
+
+                    <button type="submit" name="valider" class="btn btn-primary">S'enregistrer</button>
+                </form>
+            </div>
+        </div>
+        <!-- Pills content -->
+    </div>
+</body>
+</html>

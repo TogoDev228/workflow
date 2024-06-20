@@ -1,0 +1,15 @@
+# README - Création d'un utilisateur admin dans la base de données
+
+## Description
+Ce guide détaille les étapes pour créer un utilisateur administrateur dans la table `user` de la base de données, en utilisant les informations fournies.
+
+## Étapes
+
+1. **Connexion à la base de données**:
+   Assurez-vous d'avoir les autorisations nécessaires pour exécuter des commandes SQL sur la base de données.
+
+2. **Exécution de la commande SQL**:
+   Utilisez une interface de ligne de commande SQL ou un outil de gestion de bases de données pour exécuter la commande suivante :
+   ```sql
+   INSERT INTO user (nom, prenom, email, pswd, statut)
+   VALUES ('Admin', 'Admin', 'admin@example.com', 'admin_password_hash', 909);

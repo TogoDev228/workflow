@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../include/header') %>
+    <title>Admin Page</title>
+</head>
+<body>
+<!-- Navar -->
+    <%- include ('../include/navBackOffice') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+<div class="container-fluid mt-3">
+    
+          <% requetes.forEach(function(requete) { %>
+              <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between lh-sm">
+                        <span class="badge rounded-circle text-bg-success py-2 "><%=  requete.id %></span>
+                        <span class="badge rounded-pill text-bg-warning px-5 py-2"><%= requete.statut %></span>
+                    </div>        
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title"><%=  requete.titre %></h2>
+
+                  <h4 class="fs-5">Raison:</h4>
+                  <p class="card-text"><%= requete.raison %></p>
+
+                  <h4 class="fs-5">Description de la demande</h4>
+                  <p class="card-text"><%=  requete.description %></p>
+
+                  <div>
+                    <a href="/demande-validation-<%= requete.id %>"><i class="bi bi-clipboard2-check" style="font-size: 1.3em; color: yellowgreen;"></i></a>
+                    <a href="/demande-rejeter-<%= requete.id %>"><i class="bi bi-clipboard-x" style="font-size: 1.3em; color: red;"></i></a>
+                  </div>
+                </div>
+              </div>
+          <% }) %>
+      
+  </div>
+    
+</body>
+</html>

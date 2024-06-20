@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../include/header') %>
+    <title>Admin Page</title>
+</head>
+<body>
+<!-- Navar -->
+    <%- include ('../include/navBackOffice') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+    <div class="container my-3 d-block d-lg-flex justify-content-around">
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande à faible priorité</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= faible %></h2>
+        </div>
+
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande Normal</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= normal %></h2>
+        </div>
+
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande Important</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= important %></h2>
+        </div>
+
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande Urgent</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= urgent %></h2>
+        </div>
+    </div>
+
+    <div class="container text-bg-light col-md-10">
+        <h1 class="text-center fs-4 py-3">Mission</h1>
+        <ul class="lh-lg">
+            <li><strong class="fw-semibold">Vôtre mission est de traiter les demandes d'urgent vers faible priorité.</strong></li>
+            <li><strong class="fw-semibold">En cas d'anomalie veuillez rejeter la demande.</strong></li>
+        </ul>
+        <p class="py-3 text-center"><strong class="fw-semibold">NB:</strong> Souhait attentif au demande de chaque utilisateur</p>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include ('../include/header') %>
+  <title>Admin Page</title>
+</head>
+<body class="text-white">
+<!-- Navar -->
+    <%- include ('../include/nav') %>   
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+ <div class="container-fluid mt-3">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Email</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% res.forEach(function(requete) { %>
+            <tr>
+              <th scope="row"><%= requete.id %></th>
+              <td><%= requete.nom %></td>
+              <td><%= requete.prenom %></td>
+              <td><%= requete.email %></td>
+              <td><%= requete.statut %></td>
+              <td><a href="/admin-delete-user-<%= requete.id %>" class="btn btn-danger"><i class="bi bi-trash3"></i></a></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+ </div>
+ 
+</body>
+</html>

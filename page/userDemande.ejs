@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('include/header') %>
+    <title>User demande Page</title>
+</head>
+<body>
+<!-- Navar -->
+<%- include ('include/userNav') %>
+<!-- Fin de la navBar -->
+<div class="container text-bg-light py-5 my-5 rounded-3 col-md-6">
+    <form action="/register-user-demande" method="post">
+        <div class="mb-3">
+            <label for="titre">Titre</label>
+            <input type="text" name="titre" id="titre" class="form-control" placeholder="exemple: demande d'achat" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="description">Description </label>
+            <textarea name="description" id="description" class="form-control" placeholder="exemple: le bic coût 5000 xof au marche de gbe" required></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label for="justificatif"> Raison de la demande </label>
+            <textarea name="justificatif" id="justificatif" class="form-control" placeholder="exemple: dans les autres marché le prix est de 5500 au minimum" required></textarea>
+        </div>
+
+        <div class="mb-4">
+           <select name="statut" class="form-control" required>
+                <option value="" selected disabled> Selectionner le statut de la demande</option>
+                <option value="faible">Faible priorité</option>
+                <option value="normal">Normal</option>
+                <option value="important">Important</option>
+                <option value="urgent">Urgent</option>
+           </select>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success d-flex justify-content-center w-100">Envoyer</button>
+
+    </form>
+</div>
+
+<!-- Contenue -->
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../include/header') %>
+    <title>Admin Page</title>
+</head>
+<body>
+<!-- Navar -->
+    <%- include ('../include/nav') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+    <div class="container text-bg-light py-5 my-5 rounded-3 col-md-6">
+        <form action="/register-info-admin" method="post">
+            <div class="mb-3">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" class="form-control" placeholder="exemple: Afao" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="prenom">Prenom</label>
+                <input type="text" name="prenom" id="prenom" class="form-control" placeholder="exemple: frido" required> 
+            </div>
+
+            <div class="mb-4">
+               <select name="statut" class="form-control" required>
+                    <option value="" selected disabled> Selectionner le statut de cet individu</option>
+                    <option value="1">BackOffice niveau 1</option>
+                    <option value="2">BackOffice niveau 2</option>
+                    <option value="3">BackOffice niveau 3</option>
+                    <option value="4">BackOffice niveau 4</option>
+               </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="exemple: Togo42@gmail.com" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="pswd">mot de passe</label>
+                <input type="password" name="pswd" id="pswd" class="form-control" placeholder="****" required>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-outline-success w-50">envoyer</button>
+            </div>
+           
+        </form>
+    </div>
+ 
+</body>
+</html>

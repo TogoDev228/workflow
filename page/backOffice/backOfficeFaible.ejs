@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../include/header') %>
+    <title>Admin Page</title>
+</head>
+<body>
+<!-- Navar -->
+    <%- include ('../include/navBackOffice') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+<div class="container-fluid mt-3">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Description</th>
+            <th scope="col">Statut</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% requetes.forEach(function(requete) { %>
+            <tr>
+              <th scope="row"><%= requete.id %></th>
+              <td><%= requete.titre %></td>
+              <td><%= requete.description %></td>
+              <td><span class="badge text-bg-warning p-2">Faible priorité</span></td>  
+              <td>
+                  <a href="/demande-validation-<%= requete.id %>"><i class="bi bi-clipboard2-check" style="font-size: 1.3em; color: yellowgreen;"></i></a>
+                  <a href="/demande-rejeter-<%= requete.id %>"><i class="bi bi-clipboard-x" style="font-size: 1.3em; color: red;"></i></a>
+                  <a href="/views-backOffice-<%= requete.id %>"><i class="bi bi-info-circle-fill" style="font-size: 1.3em; color:rgb(29, 102, 102);"></i></a>
+              </td>  
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+  </div>
+    
+</body>
+</html>

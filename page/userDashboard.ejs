@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('include/header') %>
+    <title>User dasboard Page</title>
+</head>
+<body>
+<!-- Navar -->
+<%- include ('include/userNav') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+    <div class="container my-3 d-block d-md-flex justify-content-around">
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande en cours de validation</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= nonValider %></h2>
+        </div>
+
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Demande validé avec successer</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= valider %></h2>
+        </div>
+    </div>
+
+    <div class="container text-bg-light pb-5">
+        <h1 class="text-center fs-4 py-3"> Faire une demande ?</h1>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Comment soumettre une demande ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Accédez à "Demande" dans la bar de navigation.</li>
+                        <li>Remplissez le formulaire.</li>
+                        <li>Téléchargez les documents nécessaires(pas encore implmenter).</li>
+                        <li>Cliquez sur "Soumettre".</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Quels documents sont nécessaires ?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Pièce d'identité valide.</li>
+                        <li>Justificatif de domicile.</li>
+                        <li>Documents spécifiques à la demande (factures, devis, etc.).</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Comment vérifier le statut de ma demande ?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Cliqué sur "Statut des demandes" dans la navbar.</li>
+                        <li>Allez dans "Etapes des demandes".</li>
+                        <li>Consultez le statut dans la liste.</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Que faire si ma demande est incomplète ou refusée ?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Complétez les informations manquantes ou soumettez à nouveau après un refus.</li>
+                        <li>Pour plus de détails, contactez le support à support@ets.com.</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Comment contacter le support client ?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>Par email : support@notreentreprise.com</li>
+                        <li>Par téléphone : [Numéro de téléphone]</li>
+                        <li>Via le chat en direct sur notre site web.</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+ 
+</body>
+</html>

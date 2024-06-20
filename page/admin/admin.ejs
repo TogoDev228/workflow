@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../include/header') %>
+    <title>Admin Page</title>
+</head>
+<body>
+<!-- Navar -->
+    <%- include ('../include/nav') %>
+<!-- Fin de la navBar -->
+
+<!-- Contenue -->
+    <div class="container my-3 d-block d-md-flex justify-content-around">
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">Simple utilisateur</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"><%= simpleUser %></h2>
+        </div>
+
+        <div class="container-fluid text-bg-light m-2 p-5">
+            <h1 class="text-center fs-4 pt-3">BackOffice utilisateur</h1>
+            <h2 class="text-center fs-4 py-1 fw-semibold"> <%= backOfficeUser %></h2>
+        </div>
+    </div>
+
+    <div class="container text-bg-light col-md-10">
+        <h1 class="text-center fs-4 py-3">Guide d'utilisation</h1>
+        <ol class="lh-lg">
+            <li><strong class="fw-semibold">Modifer le nom et mot de passe de connexion à partir de la premiere connexion</strong></li>
+            <li><strong class="fw-semibold">Ajouter des utilisateurs BackOffice</strong></li>
+            <li><strong class="fw-semibold">Si l'un des comptes BackOffice n'est pas utilisé, veuillez le supprimer</strong></li>
+        </ol>
+        <p> <strong class="fw-semibold">Simple utilisateur:</strong> sont les employés de bas niveau, ou des clients passant des ordres. Les données envoyer seront traité par les utilisateurs BackOffice</p>
+        <p> <strong class="fw-semibold">BackOffice utilisateur:</strong> Ce sont se qui traite les requête des utilisateurs simples. Ils sont classé par niveau de 1 à n dependament du nombre entrer par l'administrateur</p>
+        <p class="py-3 text-center"><strong class="fw-semibold">NB:</strong> ne supprimer pas les utilisateurs de façons precose et sans préavis</p>
+    </div>
+
+    
+</body>
+</html>
